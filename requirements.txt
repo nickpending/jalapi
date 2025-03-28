@@ -1,2 +1,3 @@
 pyyaml>=6.0
 jsbeautifier>=1.14.0
+git+https://github.com/nickpending/voidwire_parlai.git

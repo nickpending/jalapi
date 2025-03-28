@@ -1,8 +1,8 @@
-# JALAPI: JavaScript API Analyzer
+# JALAPI: JavaScript API Analyzer with AI
 
 ## Overview
 
-JALAPI is a sophisticated system for discovering and analyzing API endpoints in JavaScript code. It uses a combination of regex pattern matching and LLM-based analysis to identify API endpoints, authentication methods, and potential security vulnerabilities.
+JALAPI is a sophisticated system for discovering and analyzing API endpoints in JavaScript code. It uses a combination of regex pattern matching and AI-powered analysis via Claude (from Anthropic) to identify API endpoints, authentication methods, and potential security vulnerabilities. The AI capability enables JALAPI to understand endpoint patterns that would be difficult to capture with traditional static analysis.
 
 ## Key Features
 
@@ -36,6 +36,8 @@ JALAPI is a sophisticated system for discovering and analyzing API endpoints in 
 
 - Python 3.8+
 - Required Python packages (see requirements.txt)
+- [voidwire_parlai](https://github.com/nickpending/voidwire_parlai) - This project depends on the voidwire_parlai package
+- Anthropic API key - You must set the `ANTHROPIC_API_KEY` environment variable with your API key
 
 ### Installation
 
@@ -48,6 +50,18 @@ cd jalapi
 
 # Install dependencies
 pip install -r requirements.txt
+
+# Install voidwire_parlai
+pip install git+https://github.com/nickpending/voidwire_parlai.git
+
+# Set up Anthropic API key (Linux/macOS)
+export ANTHROPIC_API_KEY=your_api_key_here
+
+# Set up Anthropic API key (Windows - Command Prompt)
+set ANTHROPIC_API_KEY=your_api_key_here
+
+# Set up Anthropic API key (Windows - PowerShell)
+$env:ANTHROPIC_API_KEY = "your_api_key_here"
 ```
 
 ### Usage
